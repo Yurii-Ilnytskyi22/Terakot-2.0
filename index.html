@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terakot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- ХЕДЕР -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <svg width="28px" height="28px">
+          <use href="./images/symbol-defs.svg#icon-icon-terakot"></use>
+        </svg>
+        <span>TERAKOT</span>
+      </div>
+      <button class="burger-btn" id="burgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- МОБІЛЬНЕ МЕНЮ (оверлей) -->
+   <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="header-logo">
+        <svg width="28px" height="28px">
+          <use href="./images/symbol-defs.svg#icon-icon-terakot"></use>
+        </svg>
+        <span>TERAKOT</span>
+      </div>
+      <button class="close-btn" id="closeBtn">
+        <use href="./images/symbol-defs.svg#icon-x-icon"></use>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="./menu.html">Menü</a>
+      <a href="#info">Informationen</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- СЕКЦІЯ 1: HERO з фото -->
+    <section class="hero-section">
+        <div>  
+        <h1 class="hero-title">TERAKOT</h1>
+        <p class="hero-subtitle">Café</p>
+        
+      </div>
+
+</section>
+
+<section class="hero-store">
+       <div class="container">
+        <h2 class="cafe-name">Café TERAKOT</h2>
+        <p class="cafe-address">Bismarckstr. 2, 25421 Pinneberg, Deutschland</p>
+        <p class="cafe-slogan">WIR SCHENKEN WÄRME</p>
+      </div>
+    </section> 
+    <!-- СЕКЦІЯ 2: МЕНЮ -->
+    <section class="menu-section">
+      <div class="container">
+        <span class="line"></span>
+        <h2 class="section-title">Menü</h2>
+        <span class="line"></span>
+      </div>
+      <div class="container">
+      <ul class="menu-list">
+        <li class="one-list"><a href="./menu.html#fruch" class="text-menu-list">Frühstück <svg width="24px" height="24px" class="icon-list">
+              <use href="./images/symbol-defs.svg#icon-right-arrow-alt-icon"></use>
+            </svg></a></li>
+        <li class="one-list"><a href="./menu.html#mittag" class="text-menu-list">Mittagstisch <svg width="24px" height="24px" class="icon-list">
+              <use href="./images/symbol-defs.svg#icon-right-arrow-alt-icon"></use>
+            </svg></a></li>
+        <li class="one-list"><a href="./menu.html#backwaren" class="text-menu-list">Backwaren und "To-Go" <svg width="24px" height="24px" class="icon-list">
+              <use href="./images/symbol-defs.svg#icon-right-arrow-alt-icon"></use>
+            </svg></a></li>
+        <li class="one-list"><a href="./menu.html#getranke" class="text-menu-list">Getränke <svg width="24px" height="24px" class="icon-list">
+              <use href="./images/symbol-defs.svg#icon-right-arrow-alt-icon"></use>
+            </svg></a></li>
+      </ul>
+    </div>
+    </section>
+
+    <!-- СЕКЦІЯ 3: HERO текст + фото -->
+    <section class="about-section">
+    <div class="container block-story">
+       <div class="block-text">
+        <p><strong class="st-text">TERAKOT</strong> – ein modernes, gemütliches Café mit warmer
+        Atmosphäre, gutem Kaffee und einfachen Speisen, geschaffen für Menschen,
+        die den Komfort eines Ortes schätzen, an den man gerne zurückkehrt.</p>
+      </div>
+      
+      <div class="block-img">
+        <img class="about-img" src="./images/dog-phone-1x.jpg" alt="Terakot Café">
+      </div>
+    </div>
+    </section>
+
+    <!-- СЕКЦІЯ 4: КОНТАКТИ -->
+    <section class="contacts-section" id="info">
+      <div class="container">
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-magazin-icon"></use>
+            </svg>
+          </div>
+          <div class="contact-body">
+            <p class="contact-title">Adresse:</p>
+            <p class="contact-text">Bismarckstr. 2, 25421 Pinneberg, Deutschland</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-phone-icon"></use>
+            </svg>
+          </div>
+          <div class="contact-body">
+            <p class="contact-title">Unsere Nummer:</p>
+            <a href="tel:+491624792425" class="contact-text">+49 162 479 24 25</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-meseger-icon"></use>
+            </svg>
+          </div>
+          <div class="contact-body">
+            <p class="contact-title">E-Mail:</p>
+            <p class="contact-text">terakot@teams.de</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-clock-icon"></use>
+            </svg>
+          </div>
+          <div class="contact-body">
+            <p class="contact-title">Arbeitszeit:</p>
+            <p class="contact-text">Mo-Sa: 08:00 – 21:00</p>
+            <p class="contact-text">So: 09:00 – 22:00</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- СЕКЦІЯ 5: СОЦМЕРЕЖІ -->
+    <section class="social-section">
+      <div class="container">
+        <h2 class="social-title">Wir sind in den sozialen Netzwerken</h2>
+      </div>
+      
+      <div class="container social-btns">
+        <a href="#" class="social-btn"><svg width="24px" height="24px" class="social-icon">
+              <use href="./images/symbol-defs.svg#icon-instagram-icon"></use>
+            </svg>Instagram</a>
+        <a href="#" class="social-btn"><svg width="24px" height="24px" class="social-icon">
+              <use href="./images/symbol-defs.svg#icon-google-icon"></use>
+            </svg>Google</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
