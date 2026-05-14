@@ -1,1 +1,538 @@
 <!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Terakot Menü</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/menu.css" />
+</head>
+
+<body>
+  <header class="menu-header">
+    <div class="menu-header-inner">
+      <a href="./index.html" class="menu-logo" aria-label="Zur Startseite">
+        <svg width="40" height="40">
+          <use href="./images/symbol-defs.svg#icon-icon-terakot"></use>
+        </svg>
+      </a>
+
+      <nav class="menu-nav" id="menuNav" aria-label="Menü Kategorien">
+        <a class="menu-nav-link active" href="#fruehstueck">Frühstück</a>
+        <a class="menu-nav-link" href="#mittagstisch">Mittagstisch</a>
+        <a class="menu-nav-link" href="#backwaren">Backwaren</a>
+        <a class="menu-nav-link" href="#getraenke">Getränke</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="menu-page">
+    <section class="menu-category" id="fruehstueck">
+      <div class="container">
+        <h2 class="menu-category-title">Frühstück</h2>
+
+        <ul class="dish-list">
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Klassisches Omelett</h3>
+
+                <p class="dish-description">
+                  Ein saftiges Omelett mit Eiern und Sahne, serviert mit
+                  frischem Salat und „Borodinsky“-Brot
+                </p>
+
+                <div class="dish-meta">
+                  <span>0.320 Gramm</span>
+                  <span>A, C, G, J</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">13 €</span>
+
+                  <button
+  class="dish-fav"
+  type="button"
+  data-id="omelett"
+  data-title="Klassisches Omelett"
+  data-price="13 €"
+  data-img="./images/omlet-phone-1x.jpg"
+  data-weight="0.320 Gramm"
+  data-allergens="A, C, G, J"
+  data-description="Ein saftiges Omelett mit Eiern und Sahne, serviert mit frischem Salat und „Borodinsky“-Brot"
+  aria-label="Zu Favoriten hinzufügen"
+>
+  <svg width="20" height="20">
+    <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+  </svg>
+</button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/omlet-phone-1x.jpg"
+                alt="Klassisches Omelett"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Quarkküchlein</h3>
+
+                <p class="dish-description">
+                  Zarte Quarkküchlein mit feiner Süße, dazu Sauerrahm und Kirsch-Coulis
+                </p>
+
+                <div class="dish-meta">
+                  <span>0.260 Gramm</span>
+                  <span>A, C, G</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">10 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/syrnyky-phone-1x.jpg"
+                alt="Quarkküchlein"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Das Frühstück des Bäckers</h3>
+
+                <p class="dish-description">
+                  Frisches Brötchen mit Gemüse und Käse
+                </p>
+
+                <div class="dish-meta">
+                  <span>0.190 Gramm</span>
+                  <span>A, C, G</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">9 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/schef-phone-1x.jpg"
+                alt="Das Frühstück des Bäckers"
+              />
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="menu-category" id="mittagstisch">
+      <div class="container">
+        <h2 class="menu-category-title">Mittagstisch - 12:00</h2>
+
+        <ul class="dish-list">
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Pilzcremesuppe</h3>
+                <p class="dish-description">Cremige Pilzsuppe mit Trüffelpaste für mehr Würze</p>
+
+                <div class="dish-meta">
+                  <span>0.400 Gramm</span>
+                  <span>G, A</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">14 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/grybnuy-phone-1x.jpg"
+                alt="Pilzcremesuppe"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Pasta mit Hähnchen und tomaten</h3>
+                <p class="dish-description">Hausgemachte Pasta mit zartem Hähnchenfilet und Tomaten</p>
+
+                <div class="dish-meta">
+                  <span>0.400 Gramm</span>
+                  <span>A, C</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">13 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/pasta-phone-1x.jpg"
+                alt="Pasta mit Hähnchen und tomaten"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Pulled Pork mit Kartoffelpüree</h3>
+                <p class="dish-description">Zartes, zerpflücktes Schweinefleisch in eigener Soße, serviert mit Kartoffelpüree</p>
+
+                <div class="dish-meta">
+                  <span>0.450 Gramm</span>
+                  <span>G, I</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">14 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/swununa-phone-1x.jpg"
+                alt="Pulled Pork mit Kartoffelpüree"
+              />
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="menu-category" id="backwaren">
+      <div class="container">
+        <h2 class="menu-category-title">Backwaren und “ To - Go”</h2>
+
+        <ul class="dish-list">
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Mohnbrötchen</h3>
+
+                <div class="dish-meta">
+                  <span>0.150 Gramm</span>
+                  <span>A, C, G</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">5 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/mak-phone-1x.jpg"
+                alt="Mohnbrötchen"
+              />
+            </article>
+          </li>
+
+                    <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Das Shu-Gebäk</h3>
+                <p class="dish-description">Knuspriges Windbeutelgebäck mit Plombiercreme und einer besonderen Füllung aus Rosenblüten</p>
+
+                <div class="dish-meta">
+                  <span>0.150 Gramm</span>
+                  <span>A, C, G</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">6 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/schu-phone-1x.jpg"
+                alt="Das Shu-Gebäk"
+              />
+            </article>
+          </li>
+
+                    <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Handwerklich Hergestelltes Brot</h3>
+
+                <div class="dish-meta">
+                  <span>0.800 Gramm</span>
+                  <span>A, C, G</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">9 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/bread-phone-1x.jpg"
+                alt="Handwerklich Hergestelltes Brot"
+              />
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="menu-category" id="getraenke">
+      <div class="container">
+        <h2 class="menu-category-title">Getränke</h2>
+
+        <ul class="dish-list">
+            <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Espresso</h3>
+
+                <div class="dish-meta">
+                  <span>0.35 ml</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">2 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/espresso-phone-1x.jpg"
+                alt="Espresso"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Kaffee</h3>
+
+                <div class="dish-meta">
+                  <span>0.250 ml</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">2,50 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/americano-phone-1x.jpg"
+                alt="Kaffee"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Kaffee mit Milch</h3>
+
+                <div class="dish-meta">
+                  <span>0.250 ml</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">3 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/anmercismilk-phone-1x.jpg"
+                alt="Kaffee mit Milch"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Cappuccino</h3>
+
+                <div class="dish-meta">
+                  <span>0.350 ml</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">3,50 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/capuchino-phone-1x.jpg"
+                alt="Cappuccino"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Flat White</h3>
+
+                <div class="dish-meta">
+                  <span>0.350 ml</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">3,50 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/flatwhite-phone-1x.jpg"
+                alt="Flat White"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="dish-card">
+              <div class="dish-info">
+                <h3 class="dish-title">Tee</h3>
+
+                <div class="dish-meta">
+                  <span>0.250 ml</span>
+                </div>
+
+                <div class="dish-bottom">
+                  <span class="dish-price">2,20 €</span>
+
+                  <button class="dish-fav" type="button" aria-label="Zu Favoriten hinzufügen">
+                    <svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <img
+                class="dish-img"
+                src="./images/tee-phone-1x.jpg"
+                alt="Tee"
+              />
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+<a href="./favorites.html" class="favorites-bar" id="favoritesBar">
+  <span id="favoritesCount">0. Option ausgewählt</span>
+
+  <svg width="18" height="18">
+    <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+  </svg>
+</a>
+  <script src="./js/menu.js"></script>
+</body>
+</html>

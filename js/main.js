@@ -24,3 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+const homeFavoritesBtn = document.querySelector("#homeFavoritesBtn");
+const favorites = JSON.parse(localStorage.getItem("terakotFavorites")) || [];
+
+if (homeFavoritesBtn) {
+  homeFavoritesBtn.classList.toggle("is-visible", favorites.length > 0);
+}

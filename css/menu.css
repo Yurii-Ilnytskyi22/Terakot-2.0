@@ -1,0 +1,215 @@
+:root {
+  --menu-header-height: 64px;
+}
+
+/* Header */
+
+.menu-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  max-width: var(--container-width);
+  margin: 0 auto;
+
+  background-color: var(--color-bg);
+  border-bottom: 1px solid rgba(111, 34, 13, 0.15);
+}
+
+.menu-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 10px 0 10px 20px;
+}
+
+.menu-logo {
+  flex-shrink: 0;
+  color: var(--color-brown);
+}
+
+.menu-logo svg {
+  fill: currentColor;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 10px;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  padding-right: 20px;
+}
+
+.menu-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-nav-link {
+  flex: 0 0 auto;
+
+  width: 122px;
+  padding: 11px 10px;
+
+  border-radius: 8px;
+  background-color: var(--color-brown);
+
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  color: var(--color-light);
+
+  transition: background-color 250ms ease;
+}
+
+.menu-nav-link:hover,
+.menu-nav-link.active {
+  background-color: var(--color-brown-light);
+}
+
+/* Page */
+
+.menu-page {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding-bottom: 110px;
+}
+
+.menu-category {
+  padding-top: 28px;
+  scroll-margin-top: var(--menu-header-height);
+}
+
+.menu-category:not(:last-child) .container {
+  padding-bottom: 28px;
+  border-bottom: 2px solid var(--color-brown);
+}
+
+.menu-title {
+  margin-bottom: 16px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-brown);
+
+  border-bottom: 2px solid var(--color-brown);
+  padding-bottom: 8px;
+}
+
+.menu-category-title {
+font-family: "Montserrat", sans-serif;
+font-weight: 600;
+font-size: 40px;
+letter-spacing: -0.03em;
+color: #6f220d;
+padding-bottom: 10px;
+}
+
+/* Dish card */
+
+.dish-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dish-card {
+  display: flex;
+  overflow: hidden;
+
+  width: 100%;
+  height: 140px;
+
+  border-radius: var(--radius-card);
+  background-color: var(--color-card);
+}
+
+.dish-info {
+  display: flex;
+  flex-direction: column;
+
+  width: 185px;
+  padding: 15px 10px 9px 15px;
+}
+
+.dish-title {
+  margin-bottom: 4px;
+
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #6f220d;
+}
+
+.dish-description {
+  margin-bottom: 6px;
+
+  font-family: "Lato", sans-serif;
+  font-size: 8px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #6f220d;
+}
+
+.dish-meta {
+  display: flex;
+  gap: 8px;
+
+  margin-top: auto;
+
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #6f220d;
+}
+
+.dish-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 12px;
+}
+
+.dish-price {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #6f220d;
+}
+
+.dish-fav {
+  color: #6f220d;
+}
+
+.dish-fav svg {
+  fill: transparent;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.dish-fav.is-active svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.dish-img {
+  flex-shrink: 0;
+  width: 150px;
+  height: 140px;
+  object-fit: cover;
+}
+
