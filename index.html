@@ -12,7 +12,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/home.css">
-  <link rel="stylesheet" href="./css/menu.css">
 </head>
 <body>
   <header class="site-header">
@@ -43,9 +42,17 @@
       </div>
 
       <nav class="mobile-nav">
-        <a href="./menu.html">Menü</a>
-        <a href="#info">Informationen</a>
-      </nav>
+  <a href="./menu.html">Menü</a>
+  <a href="#info">Informationen</a>
+</nav>
+
+<a href="./favorites.html" class="mobile-favorites-bar" id="mobileFavoritesBar">
+  <span id="mobileFavoritesCount">0. Option ausgewählt</span>
+
+  <svg width="28" height="28">
+    <use href="./images/symbol-defs.svg#icon-heart-icon"></use>
+  </svg>
+</a>
     </div>
   </div>
 
