@@ -2,44 +2,72 @@ const nav = document.querySelector("#menuNav");
 const navLinks = document.querySelectorAll(".menu-nav-link");
 const sections = document.querySelectorAll(".menu-category");
 
-function setActiveLink(id) {
-  navLinks.forEach((link) => {
-    const isActive = link.getAttribute("href") === `#${id}`;
-    link.classList.toggle("active", isActive);
+function centerActiveLink(activeLink) {
+  if (!nav || !activeLink) return;
 
-    if (isActive) {
-      link.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest",
-      });
-    }
+  const navRect = nav.getBoundingClientRect();
+  const linkRect = activeLink.getBoundingClientRect();
+
+  const navCenter = navRect.width / 2;
+  const linkCenter = linkRect.left - navRect.left + linkRect.width / 2;
+
+  nav.scrollTo({
+    left: nav.scrollLeft + linkCenter - navCenter,
+    behavior: "smooth",
   });
 }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActiveLink(entry.target.id);
-      }
-    });
-  },
-  {
-    root: null,
-    threshold: 0.4,
-    rootMargin: "-80px 0px -45% 0px",
-  }
-);
+function setActiveLink(id) {
+  const activeLink = document.querySelector(`.menu-nav-link[href="#${id}"]`);
 
-sections.forEach((section) => observer.observe(section));
+  if (!activeLink || activeLink.classList.contains("active")) return;
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+  });
+
+  activeLink.classList.add("active");
+  centerActiveLink(activeLink);
+}
+
+function updateActiveSectionOnScroll() {
+  const headerHeight = 64;
+  const checkPoint = window.scrollY + headerHeight + 120;
+
+  let currentSectionId = sections[0].id;
+
+  sections.forEach((section) => {
+    if (checkPoint >= section.offsetTop) {
+      currentSectionId = section.id;
+    }
+  });
+
+  setActiveLink(currentSectionId);
+}
+
+window.addEventListener("scroll", updateActiveSectionOnScroll);
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
     const id = link.getAttribute("href").replace("#", "");
+    const section = document.getElementById(id);
+
+    if (!section) return;
+
+    const headerHeight = 64;
+
+    window.scrollTo({
+      top: section.offsetTop - headerHeight,
+      behavior: "smooth",
+    });
+
     setActiveLink(id);
   });
 });
+
+updateActiveSectionOnScroll();
 
 const FAVORITES_KEY = "terakotFavorites";
 

@@ -94,20 +94,37 @@
 /* Hero */
 
 .hero-section {
-  max-width: var(--container-width);
-  margin: 0 auto;
+  width: 100%;
   padding: 134px 0 110px;
 
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.2),
-      rgba(111, 34, 13, 0.2)
-    ),
-    url("../images/cafe-phone-1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  animation: heroSlider 15s infinite;
+}
+
+@keyframes heroSlider {
+  0%,
+  30% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.2), rgba(111, 34, 13, 0.2)),
+      url("../images/cafe-phone-1x.jpg");
+  }
+
+  33%,
+  63% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.2), rgba(111, 34, 13, 0.2)),
+      url("../images/cafe2-1x.jpg");
+  }
+
+  66%,
+  100% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.2), rgba(111, 34, 13, 0.2)),
+      url("../images/dog-phone-1x.jpg");
+  }
 }
 
 .hero-title {
@@ -131,7 +148,6 @@
 /* Store */
 
 .hero-store {
-  max-width: var(--container-width);
   margin: 0 auto;
   padding: 15px 0 25px;
   background-color: var(--color-brown);
