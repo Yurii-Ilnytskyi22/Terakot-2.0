@@ -1,22 +1,34 @@
 const FAVORITES_KEY = "terakotFavorites";
-
 const favoritesList = document.querySelector("#favoritesList");
-const favoritesEmpty = document.querySelector("#favoritesEmpty");
 
 function getFavorites() {
-  return JSON.parse(localStorage.getItem(FAVORITES_KEY)) || [];
+  try {
+    const favorites = JSON.parse(localStorage.getItem(FAVORITES_KEY)) || [];
+
+    return favorites.filter((item) => item && item.id);
+  } catch {
+    return [];
+  }
 }
 
 function saveFavorites(favorites) {
   localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
 }
 
+function redirectToMenuIfEmpty(favorites) {
+  if (favorites.length === 0) {
+    localStorage.removeItem(FAVORITES_KEY);
+    window.location.replace("./menu.html");
+  }
+}
+
 function renderFavorites() {
   const favorites = getFavorites();
 
-  favoritesList.innerHTML = "";
+  saveFavorites(favorites);
+  redirectToMenuIfEmpty(favorites);
 
-  favoritesEmpty.classList.toggle("is-visible", favorites.length === 0);
+  favoritesList.innerHTML = "";
 
   favorites.forEach((item) => {
     const li = document.createElement("li");
@@ -26,11 +38,7 @@ function renderFavorites() {
         <div class="favorite-info">
           <h3 class="favorite-title">${item.title}</h3>
 
-          ${
-            item.description
-              ? `<p class="favorite-description">${item.description}</p>`
-              : ""
-          }
+          ${item.description ? `<p class="favorite-description">${item.description}</p>` : ""}
 
           <div class="favorite-meta">
             <span>${item.weight || ""}</span>
@@ -55,14 +63,13 @@ function renderFavorites() {
     favoritesList.appendChild(li);
   });
 
-  const removeButtons = document.querySelectorAll(".favorite-remove");
-
-  removeButtons.forEach((button) => {
+  document.querySelectorAll(".favorite-remove").forEach((button) => {
     button.addEventListener("click", () => {
       const id = button.dataset.id;
       const updatedFavorites = getFavorites().filter((item) => item.id !== id);
 
       saveFavorites(updatedFavorites);
+      redirectToMenuIfEmpty(updatedFavorites);
       renderFavorites();
     });
   });
