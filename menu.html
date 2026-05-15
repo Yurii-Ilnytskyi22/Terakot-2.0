@@ -7,7 +7,11 @@
   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
   <title>Terakot Menü</title>
-
+<link
+  rel="icon"
+  type="image/svg+xml"
+  href="./images/favicon.svg"
+/>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -22,22 +26,30 @@
 
 <body>
   <header class="menu-header">
-    <div class="menu-header-inner">
-      <a href="./index.html" class="menu-logo" aria-label="Zur Startseite">
-        <svg width="40" height="40">
-          <use href="./images/symbol-defs.svg#icon-icon-terakot"></use>
-        </svg>
-      </a>
+  <div class="menu-header-inner">
+    <a href="./index.html" class="menu-logo" aria-label="Zur Startseite">
+      <svg class="menu-logo-icon" width="50" height="50">
+        <use href="./images/symbol-defs.svg#icon-icon-terakot"></use>
+      </svg>
 
-      <nav class="menu-nav" id="menuNav" aria-label="Menü Kategorien">
-        <a class="menu-nav-link active" href="#fruehstueck">Frühstück</a>
-        <a class="menu-nav-link" href="#mittag">Mittagstisch</a>
-        <a class="menu-nav-link" href="#backwaren">Backwaren</a>
-        <a class="menu-nav-link" href="#getranke">Getränke</a>
-      </nav>
-    </div>
-  </header>
+      <span class="menu-logo-title">TERAKOT</span>
+    </a>
 
+    <p class="menu-logo-subtitle">WIR SCHENKEN WÄRME</p>
+
+    <nav class="desktop-nav">
+      <a href="./index.html" class="desktop-nav-link">Startseite</a>
+      <a href="./menu.html" class="desktop-nav-link is-active" aria-current="page">Menü</a>
+    </nav>
+
+    <nav class="menu-nav" id="menuNav" aria-label="Menü Kategorien">
+      <a class="menu-nav-link active" href="#fruehstueck">Frühstück</a>
+      <a class="menu-nav-link" href="#mittag">Mittagstisch</a>
+      <a class="menu-nav-link" href="#backwaren">Backwaren</a>
+      <a class="menu-nav-link" href="#getranke">Getränke</a>
+    </nav>
+  </div>
+</header>
   <main class="menu-page">
     <section class="menu-category" id="fruehstueck">
       <div class="container">
@@ -628,5 +640,6 @@
   </svg>
 </a>
   <script src="./js/menu.js"></script>
+  <script src="./js/nav-transition.js"></script>
 </body>
 </html>

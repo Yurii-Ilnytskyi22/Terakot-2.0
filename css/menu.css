@@ -2,7 +2,11 @@
   --menu-header-height: 64px;
 }
 
-/* Header */
+.desktop-nav,
+.menu-logo-title,
+.menu-logo-subtitle {
+  display: none;
+}
 
 .menu-header {
   position: fixed;
@@ -18,8 +22,8 @@
 }
 
 .menu-header-inner {
-  max-width: var(--container-width);
   height: 64px;
+  max-width: var(--container-width);
   margin: 0 auto;
   padding-left: 20px;
 
@@ -33,18 +37,18 @@
   color: var(--color-brown);
 }
 
-.menu-logo svg {
+.menu-logo-icon {
+  width: 40px;
+  height: 40px;
   fill: currentColor;
 }
 
 .menu-nav {
   display: flex;
   gap: 10px;
-
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
-
   padding-right: 20px;
 }
 
@@ -68,25 +72,16 @@
   font-family: "Lato", sans-serif;
   font-size: 12px;
   color: var(--color-light);
-
-  transition: background-color 250ms ease;
 }
 
 .menu-nav-link.active {
   background-color: var(--color-brown-light);
 }
 
-/* Page */
-
 .menu-page {
   width: 100%;
   padding-top: 64px;
   padding-bottom: 110px;
-}
-
-.menu-category {
-  padding-top: 28px;
-  scroll-margin-top: var(--menu-header-height);
 }
 
 .menu-category {
@@ -100,6 +95,7 @@
 
 .menu-category-title {
   margin-bottom: 10px;
+  padding-bottom: 10px;
 
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -126,29 +122,6 @@
 
 .menu-line-bottom {
   margin-top: 28px;
-}
-
-.menu-title {
-  margin-bottom: 16px;
-
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  color: var(--color-brown);
-
-  border-bottom: 2px solid var(--color-brown);
-  padding-bottom: 8px;
-}
-
-.menu-category-title {
-font-family: "Montserrat", sans-serif;
-font-weight: 600;
-font-size: 40px;
-letter-spacing: -0.03em;
-color: #6f220d;
-padding-bottom: 10px;
 }
 
 /* Dish card */
@@ -287,4 +260,366 @@ padding-bottom: 10px;
 
 .favorites-bar svg {
   fill: #f5f2ee;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --menu-header-height: 150px;
+  }
+
+  .menu-header {
+    height: 150px;
+    background-color: var(--color-brown);
+    border-bottom: none;
+  }
+
+  .menu-header-inner {
+    max-width: none;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    padding: 24px 0 0 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .menu-logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    color: #fffff8;
+  }
+
+  .menu-logo-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .menu-logo-title {
+    display: block;
+
+    font-family: "Cinzel", serif;
+    font-size: 48px;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: #fffff8;
+  }
+
+  .menu-logo-subtitle {
+    display: block;
+
+    margin-top: 3px;
+    margin-left: 62px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    color: #fffff8;
+  }
+
+  .desktop-nav {
+    display: flex;
+    gap: 24px;
+
+    margin-top: auto;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #fffff8;
+  }
+
+  .desktop-nav a {
+    position: relative;
+    padding-bottom: 9px;
+    color: #fffff8;
+  }
+
+  .desktop-nav a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+    background-color: #fffff8;
+  }
+
+  .menu-nav {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    z-index: 900;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    width: 374px;
+    height: calc(100vh - 150px);
+    padding: 30px 0 0 25px;
+
+    overflow: visible;
+
+    border-radius: 0 15px 15px 0;
+    background-color: #fffff8;
+    box-shadow: 0 4px 4px 5px rgba(199, 106, 74, 0.2);
+  }
+
+  .menu-nav-link {
+    display: block;
+
+    width: auto;
+    height: auto;
+    padding: 0;
+
+    border-radius: 0;
+    background-color: transparent;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: left;
+    color: #5e3a2a;
+  }
+
+  .menu-nav-link:hover,
+  .menu-nav-link.active {
+    background-color: transparent;
+    color: #c76a4a;
+  }
+
+  .menu-page {
+    padding-top: 175px;
+    padding-left: 394px;
+    padding-right: 20px;
+    padding-bottom: 110px;
+  }
+
+  .menu-page .container {
+    width: 350px;
+    max-width: 350px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-category {
+    padding-top: 50px;
+    scroll-margin-top: 175px;
+  }
+
+  .menu-category:first-child {
+    padding-top: 0;
+  }
+
+  .menu-category-title {
+    margin-bottom: 25px;
+    padding-bottom: 0;
+    font-size: 40px;
+  }
+
+  .menu-line {
+    width: 350px;
+  }
+
+  .dish-list {
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .menu-line-bottom {
+    display: none;
+  }
+
+  .dish-card {
+    width: 350px;
+    height: 150px;
+  }
+
+  .dish-info {
+    width: 185px;
+    padding: 18px 10px 10px 15px;
+  }
+
+  .dish-img {
+    width: 165px;
+    height: 150px;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .dish-fav svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .favorites-bar {
+    left: 569px;
+    width: 235px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .favorites-bar svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .menu-header {
+    height: 90px;
+  }
+
+  .menu-header-inner {
+    height: 90px;
+    padding: 10px 0 0 20px;
+  }
+
+  .menu-logo-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .menu-logo-title {
+    font-size: 32px;
+  }
+
+  .menu-logo-subtitle {
+    margin-left: 47px;
+    font-size: 7px;
+  }
+
+  .desktop-nav {
+    margin-top: auto;
+    gap: 22px;
+    font-size: 14px;
+  }
+
+  .menu-nav {
+    display: none;
+  }
+
+  .menu-page {
+    padding: 115px 20px 110px;
+  }
+
+  .menu-page .container {
+    width: 100%;
+    max-width: 1430px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .menu-category {
+    padding-top: 50px;
+  }
+
+  .menu-category:first-child {
+    padding-top: 0;
+  }
+
+  .menu-category-title {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  .menu-line {
+    width: 100%;
+  }
+
+.dish-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 1.5vw, 20px);
+}
+
+.dish-card {
+  width: 100%;
+  height: clamp(150px, 14vw, 200px);
+  border-radius: 15px;
+}
+
+.dish-info {
+  width: calc(100% - clamp(150px, 14vw, 200px));
+  padding: clamp(12px, 1.4vw, 20px);
+}
+
+.dish-title {
+  margin-bottom: 8px;
+  font-size: clamp(14px, 1.4vw, 20px);
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #6f220d;
+}
+
+.dish-description {
+  margin-bottom: 10px;
+
+  font-family: "Lato", sans-serif;
+  font-size: clamp(7px, 0.8vw, 12px);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: #6f220d;
+}
+
+.dish-meta {
+  display: flex;
+  gap: 14px;
+
+  margin-top: auto;
+
+  font-family: "Cinzel", serif;
+  font-size: clamp(8px, 0.8vw, 11px);
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #6f220d;
+}
+
+.dish-bottom {
+  margin-top: 18px;
+}
+
+.dish-price {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: clamp(18px, 1.7vw, 24px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #6f220d;
+}
+
+.dish-fav svg {
+width: clamp(18px, 1.7vw, 25px);
+height: clamp(18px, 1.7vw, 25px);
+}
+
+.dish-img {
+  width: clamp(150px, 14vw, 200px);
+  height: clamp(150px, 14vw, 200px);
+  border-radius: 0 15px 15px 0;
+}
+
+  .favorites-bar {
+    left: auto;
+    right: 50px;
+    bottom: 30px;
+    transform: none;
+
+    width: 235px;
+    height: 45px;
+  }
 }

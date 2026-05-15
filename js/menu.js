@@ -5,6 +5,8 @@ const sections = document.querySelectorAll(".menu-category");
 function centerActiveLink(activeLink) {
   if (!nav || !activeLink) return;
 
+  if (window.innerWidth >= 768) return;
+
   const navRect = nav.getBoundingClientRect();
   const linkRect = activeLink.getBoundingClientRect();
 
@@ -31,7 +33,7 @@ function setActiveLink(id) {
 }
 
 function updateActiveSectionOnScroll() {
-  const headerHeight = 64;
+  const headerHeight = window.innerWidth >= 768 ? 150 : 64;
   const checkPoint = window.scrollY + headerHeight + 120;
 
   let currentSectionId = sections[0].id;
@@ -56,7 +58,7 @@ navLinks.forEach((link) => {
 
     if (!section) return;
 
-    const headerHeight = 64;
+    const headerHeight = window.innerWidth >= 768 ? 150 : 64;
 
     window.scrollTo({
       top: section.offsetTop - headerHeight,

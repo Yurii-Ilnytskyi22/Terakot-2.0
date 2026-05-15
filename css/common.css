@@ -73,10 +73,58 @@ svg {
   display: block;
 }
 
+.desktop-nav-link {
+  position: relative;
+  padding-bottom: 9px;
+  color: #fffff8;
+}
+
+.desktop-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+  background-color: #fffff8;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease;
+}
+
+.desktop-nav-link.is-active::after,
+.desktop-nav-link.is-changing::after {
+  transform: scaleX(1);
+}
+
+/* mobile базово */
 .container {
-  max-width: var(--container-width);
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: 375px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  :root {
+    --container-width: 768px;
+    --container-padding: 24px;
+  }
+
+  .container {
+    max-width: var(--container-width);
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 24px;
+  }
 }

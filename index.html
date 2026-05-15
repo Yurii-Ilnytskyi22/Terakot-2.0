@@ -12,17 +12,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/home.css">
+  <link
+  rel="icon"
+  type="image/svg+xml"
+  href="./images/favicon.svg"
+/>
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <button class="burger-btn" id="burgerBtn" type="button" aria-label="Open menu">
-        <svg class="burger-icon" width="40" height="40">
-          <use href="./images/symbol-defs.svg#icon-menu-icon"></use>
-        </svg>
-      </button>
-    </div>
-  </header>
+  <div class="container header-inner">
+    <a href="./index.html" class="desktop-logo">
+      <svg class="logo-icon" width="35" height="35">
+        <use href="./images/symbol-defs.svg#icon-icon-terakot"></use>
+      </svg>
+
+      <div>
+        <span class="desktop-logo-title">TERAKOT</span>
+        <span class="desktop-logo-subtitle">WIR SCHENKEN WÄRME</span>
+      </div>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="./index.html" class="desktop-nav-link is-active" aria-current="page">Startseite</a>
+      <a href="./menu.html" class="desktop-nav-link">Menü</a>
+    </nav>
+
+    <button class="burger-btn" id="burgerBtn" type="button" aria-label="Open menu">
+      <svg class="burger-icon" width="40" height="40">
+        <use href="./images/symbol-defs.svg#icon-menu-icon"></use>
+      </svg>
+    </button>
+  </div>
+</header>
 
   <div class="mobile-menu" id="mobileMenu">
     <div class="container mobile-menu-inner">
@@ -63,7 +84,31 @@
         <p class="hero-subtitle">Café</p>
       </div>
     </section>
+<section class="tablet-info-section">
+  <div class="container tablet-info-container">
+    <div class="tablet-info-item">
+      <p class="tablet-info-title">Adresse:</p>
 
+      <div class="tablet-info-row">
+        <svg width="24" height="24">
+          <use href="./images/symbol-defs.svg#icon-magazin-icon"></use>
+        </svg>
+        <p>Bismarckstr. 2, 25421 Pinneberg, Deutschland</p>
+      </div>
+    </div>
+
+    <div class="tablet-info-item">
+      <p class="tablet-info-title">Unsere nummer:</p>
+
+      <div class="tablet-info-row">
+        <svg width="24" height="24">
+          <use href="./images/symbol-defs.svg#icon-phone-icon"></use>
+        </svg>
+        <a href="tel:+491624792425">+49 162 479 24 25</a>
+      </div>
+    </div>
+  </div>
+</section>
     <section class="hero-store">
       <div class="container">
         <h2 class="cafe-name">Café TERAKOT</h2>
@@ -140,80 +185,127 @@
         </div>
       </div>
     </section>
+<section class="contacts-section" id="info">
+  <div class="container contacts-container">
+    <div class="contact-item">
+      <svg class="contact-icon" width="24" height="24">
+        <use href="./images/symbol-defs.svg#icon-magazin-icon"></use>
+      </svg>
 
-    <section class="contacts-section" id="info">
-      <div class="container contacts-container">
-        <div class="contact-item">
-          <svg class="contact-icon" width="24" height="24">
-            <use href="./images/symbol-defs.svg#icon-magazin-icon"></use>
-          </svg>
+      <div class="contact-body">
+        <p class="contact-title">Adresse:</p>
+        <p class="contact-text">Bismarckstr. 2, 25421 Pinneberg, Deutschland</p>
+      </div>
+    </div>
 
-          <div class="contact-body">
-            <p class="contact-title">Adresse:</p>
-            <p class="contact-text">Bismarckstr. 2, 25421 Pinneberg, Deutschland</p>
-          </div>
-        </div>
+    <div class="contact-item">
+      <svg class="contact-icon" width="24" height="24">
+        <use href="./images/symbol-defs.svg#icon-phone-icon"></use>
+      </svg>
 
-        <div class="contact-item">
-          <svg class="contact-icon" width="24" height="24">
-            <use href="./images/symbol-defs.svg#icon-phone-icon"></use>
-          </svg>
+      <div class="contact-body">
+        <p class="contact-title">Unsere Nummer:</p>
+        <a href="tel:+491624792425" class="contact-text">+49 162 479 24 25</a>
+      </div>
+    </div>
 
-          <div class="contact-body">
-            <p class="contact-title">Unsere Nummer:</p>
-            <a href="tel:+491624792425" class="contact-text">+49 162 479 24 25</a>
-          </div>
-        </div>
+    <div class="contact-item">
+      <svg class="contact-icon" width="24" height="24">
+        <use href="./images/symbol-defs.svg#icon-meseger-icon"></use>
+      </svg>
 
-        <div class="contact-item">
-          <svg class="contact-icon" width="24" height="24">
-            <use href="./images/symbol-defs.svg#icon-meseger-icon"></use>
-          </svg>
+      <div class="contact-body">
+        <p class="contact-title">E-Mail:</p>
+        <a href="mailto:terakot@teams.de" class="contact-text">terakot@teams.de</a>
+      </div>
+    </div>
 
-          <div class="contact-body">
-            <p class="contact-title">E-Mail:</p>
-            <a href="mailto:terakot@teams.de" class="contact-text">terakot@teams.de</a>
-          </div>
-        </div>
+    <div class="contact-item">
+      <svg class="contact-icon" width="24" height="24">
+        <use href="./images/symbol-defs.svg#icon-clock-icon"></use>
+      </svg>
 
-        <div class="contact-item">
-          <svg class="contact-icon" width="24" height="24">
-            <use href="./images/symbol-defs.svg#icon-clock-icon"></use>
-          </svg>
+      <div class="contact-body">
+        <p class="contact-title">Arbeitszeit:</p>
 
-          <div class="contact-body">
-            <p class="contact-title">Arbeitszeit:</p>
-
-            <div class="work-time">
-              <p class="contact-text">Mo-Sa: 08:00 - 21:00</p>
-              <p class="contact-text">So: 09:00 - 22:00</p>
-            </div>
-          </div>
+        <div class="work-time">
+          <p class="contact-text">Mo-Sa: 08:00 - 21:00</p>
+          <p class="contact-text">So: 09:00 - 22:00</p>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="social-section">
-      <div class="container">
-        <h2 class="social-title">Wir sind in den sozialen Netzwerken</h2>
+<section class="social-section">
+  <div class="container">
+    <h2 class="social-title">Wir sind in den sozialen Netzwerken</h2>
 
-        <div class="social-btns">
-          <a href="#" class="social-btn">
-            <svg class="social-icon" width="24" height="24">
-              <use href="./images/symbol-defs.svg#icon-instagram-icon"></use>
-            </svg>
-            Instagram
-          </a>
+    <div class="social-btns">
+      <a href="#" class="social-btn">
+        <svg class="social-icon" width="24" height="24">
+          <use href="./images/symbol-defs.svg#icon-instagram-icon"></use>
+        </svg>
+        Instagram
+      </a>
 
-          <a href="#" class="social-btn">
-            <svg class="social-icon" width="24" height="24">
-              <use href="./images/symbol-defs.svg#icon-google-icon"></use>
-            </svg>
-            Google
-          </a>
-        </div>
+      <a href="#" class="social-btn">
+        <svg class="social-icon" width="24" height="24">
+          <use href="./images/symbol-defs.svg#icon-google-icon"></use>
+        </svg>
+        Google
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="footer-info-section">
+  <div class="container footer-info-grid">
+    <div class="footer-info-block footer-worktime">
+      <h2 class="footer-info-heading">Arbeitszeit:</h2>
+
+      <ul class="footer-worktime-list">
+        <li><span>Montag</span><span>08:00 - 21:00</span></li>
+        <li><span>Dienstag</span><span>08:00 - 21:00</span></li>
+        <li><span>Mittwoch</span><span>08:00 - 21:00</span></li>
+        <li><span>Donnerstag</span><span>08:00 - 21:00</span></li>
+        <li><span>Freitag</span><span>08:00 - 21:00</span></li>
+        <li><span>Samstag</span><span>08:00 - 21:00</span></li>
+        <li><span>Sonntag</span><span>09:00 - 22:00</span></li>
+      </ul>
+    </div>
+
+    <div class="footer-info-block footer-contacts">
+      <h2 class="footer-info-heading">Unsere Kontaktdaten:</h2>
+
+      <address class="footer-contact-list">
+        <p>Bismarckstr. 2, 25421 Pinneberg,<br>Deutschland</p>
+        <a href="tel:+491624792425">+49 162 479 24 25</a>
+        <a href="mailto:terakot@teams.de">terakot@teams.de</a>
+      </address>
+    </div>
+
+    <div class="footer-info-block footer-social">
+      <h2 class="footer-info-heading">Wir in den sozialen Netzwerken:</h2>
+
+      <div class="footer-social-list">
+        <a href="#">
+          <svg width="25" height="25">
+            <use href="./images/symbol-defs.svg#icon-instagram-icon"></use>
+          </svg>
+          Instagram
+        </a>
+
+        <a href="#">
+          <svg width="25" height="25">
+            <use href="./images/symbol-defs.svg#icon-google-icon"></use>
+          </svg>
+          Google
+        </a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   </main>
 <a href="./favorites.html" class="home-favorites-btn" id="homeFavoritesBtn" aria-label="Favoriten öffnen">
   <svg width="20" height="20">
@@ -221,5 +313,6 @@
   </svg>
 </a>
   <script src="./js/main.js"></script>
+  <script src="./js/nav-transition.js"></script>
 </body>
 </html>
