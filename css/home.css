@@ -185,7 +185,7 @@
   30% {
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.2), rgba(111, 34, 13, 0.2)),
-      url("../images/cafe-phone-1x.jpg");
+      url("../images/cafe-phone-2x.jpg");
   }
 
   33%,
@@ -199,7 +199,7 @@
   100% {
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.2), rgba(111, 34, 13, 0.2)),
-      url("../images/dog-phone-1x.jpg");
+      url("../images/doge-phone-2x.jpg");
   }
 }
 
