@@ -229,6 +229,66 @@
   object-fit: cover;
 }
 
+*
+.dish-meta {
+  position: relative;
+}
+
+.allergen-btn {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: inherit;
+
+  color: #5e3a2a;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.allergen-btn.is-active {
+  color: #c76a4a;
+}
+
+.allergen-tooltip {
+  position: absolute;
+  right: 35px;
+  bottom: 18px;
+  z-index: 50;
+
+  width: 145px;
+  padding: 12px;
+
+  border-radius: 8px 8px 0 8px;
+  background-color: #fffff8;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+
+  font-family: "Cinzel", serif;
+  color: #6f220d;
+}
+
+.allergen-tooltip p {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+
+  margin-bottom: 8px;
+
+  font-size: 8px;
+  line-height: 1.2;
+}
+
+.allergen-tooltip p:last-child {
+  margin-bottom: 0;
+}
+
+.allergen-tooltip strong {
+  font-size: 10px;
+  line-height: 1;
+}
+
+*
+
 .favorites-bar {
   position: fixed;
   left: 50%;

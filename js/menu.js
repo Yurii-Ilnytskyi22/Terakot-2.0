@@ -69,6 +69,66 @@ navLinks.forEach((link) => {
   });
 });
 
+const ALLERGENS = {
+  A: "Glutenhaltiges Getreide",
+  B: "Krebstiere",
+  C: "Eier",
+  D: "Fische",
+  E: "Erdnüsse",
+  F: "Sojabohnen",
+  G: "Milch inkl. Laktose",
+  H: "Schalenfrüchte (Nüsse)",
+  I: "Sellerie",
+  J: "Senf",
+  K: "Sesamsamen",
+  L: "Schwefeldioxid und Sulfite",
+  M: "Lupinen",
+  N: "Weichtiere",
+};
+
+document.addEventListener("click", (event) => {
+  const btn = event.target.closest(".allergen-btn");
+  const openedTooltip = document.querySelector(".allergen-tooltip");
+  const activeBtn = document.querySelector(".allergen-btn.is-active");
+
+  if (!btn) {
+    openedTooltip?.remove();
+    activeBtn?.classList.remove("is-active");
+    return;
+  }
+
+  if (btn.classList.contains("is-active")) {
+    openedTooltip?.remove();
+    btn.classList.remove("is-active");
+    return;
+  }
+
+  openedTooltip?.remove();
+  activeBtn?.classList.remove("is-active");
+
+  const letters = btn.dataset.allergens
+    .split(",")
+    .map((letter) => letter.trim())
+    .filter(Boolean);
+
+  const tooltip = document.createElement("div");
+  tooltip.className = "allergen-tooltip";
+
+  tooltip.innerHTML = letters
+    .map(
+      (letter) => `
+        <p>
+          <strong>${letter}</strong>
+          <span>– ${ALLERGENS[letter] || "Unbekannter Allergen"}</span>
+        </p>
+      `
+    )
+    .join("");
+
+  btn.classList.add("is-active");
+  btn.parentElement.appendChild(tooltip);
+});
+
 updateActiveSectionOnScroll();
 
 const FAVORITES_KEY = "terakotFavorites";
@@ -122,7 +182,7 @@ favButtons.forEach((button) => {
         id,
         title: button.dataset.title,
         price: button.dataset.price,
-        img: button.dataset.img,
+        img: button.dataset.img2x || button.dataset.img,
         weight: button.dataset.weight,
         allergens: button.dataset.allergens,
         description: button.dataset.description,
